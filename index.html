@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COOL NIGHT OUT</title>
+  <meta name="description" content="Simple event page for COOL NIGHT OUT — what's on." />
+  <style>
+    :root {
+      --bg: #000;
+      --fg: #fff;
+      --border: rgba(255,255,255,0.2);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; }
+
+    header { border-bottom: 1px solid var(--border); padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.8rem; }
+    .brand a, header a { color: var(--fg); text-decoration: none; }
+
+    main { max-width: 700px; margin: 5rem auto 2rem auto; padding: 0 1rem; }
+    h2 { margin-top: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    ul.events { list-style: none; padding: 0; display: grid; gap: 10px; margin-bottom: 5rem; }
+    li { border: 1px solid var(--border); border-radius: 12px; padding: 1rem; display: flex; justify-content: space-between; align-items: center; }
+    .event-name { font-weight: 600; }
+    .event-date { opacity: 0.8; }
+
+    footer { text-align: center; color: rgba(255,255,255,0.6); font-size: 0.8rem; padding: 2rem 1rem; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><a href="#top">COOL NIGHT OUT</a></div>
+    <a href="#about">About</a>
+  </header>
+
+  <main id="top">
+    <section id="whats-on">
+      <h2>What's On</h2>
+      <ul class="events">
+        <li><span class="event-name">Warehouse Party</span><span class="event-date">12 Dec 2025</span></li>
+        <li><span class="event-name">Rooftop Sessions</span><span class="event-date">26 Dec 2025</span></li>
+        <li><span class="event-name">New Year Vibes</span><span class="event-date">31 Dec 2025</span></li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>COOL NIGHT OUT is a simple, good-time gathering. We keep it minimal—date, place, good music. Follow us for drops and the next night.</p>
+      <p><strong>Contact:</strong> <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="y"></span> COOL NIGHT OUT</p>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
